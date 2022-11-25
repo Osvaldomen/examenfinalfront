@@ -8,8 +8,21 @@
     box-sizing: border-box;
 }
 
+/* FONTS */
 h1, h2, h3, p, button, li, a {
     font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 114.6%;
+    letter-spacing: -0.035em;
+}
+
+p {
+    font-weight: 500;
+    font-size: 16px;
 }
 
 /* ESTO ES EL DISEÑO DEL EL HEADER DE ESCRITORIO*/
@@ -80,7 +93,6 @@ button {
 .slide {
     flex-direction: row;
     align-items: center;
-    padding: 0px;
     gap: 100px;
     position: relative;
     justify-content: center;
@@ -100,18 +112,10 @@ button {
     letter-spacing: -0.035em;
     color: #232C50;
     flex-direction: column;
-    align-items: flex-end;
     padding: 0px;
     gap: 28px;
     width: 450px;
     height: 399px;
-}
-
-.text h1 {
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 114.6%;
-    letter-spacing: -0.035em;
 }
 
 .text p {
@@ -129,8 +133,8 @@ button {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 20px 0px;
-    gap: 100px;
+    padding: 22px 10px;
+    gap: 130px;
     position: relative;
     background: #8B48BF;
     margin-top: 100px;
@@ -166,8 +170,8 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem 0 0 0;
-    gap: 24px;
+    padding: 4rem 0 0 0;
+    gap: 20px;
     position: relative;
     width: 100%;
 }
@@ -176,7 +180,7 @@ button {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    gap: 2rem;    
+    gap: 1.5rem;    
 }
 
 .features .textcard {
@@ -223,44 +227,202 @@ button {
 }
 
 /* ESTO ES EL DISEÑO DE LAS CARD TESTIMONIALS */
-.testimonials {
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
-    position: relative;
-}
 
 .testimonial {
     flex-direction: row;
+    position: relative;
+    width: 100%;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cards {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards h2 {
+    margin: 8rem 0 4rem 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 39.2143px;
+    line-height: 156.6%;
+    color: #242E53;
+}
+
+.card {
+    flex-direction: column;
     align-items: center;
     padding: 0px;
-    gap: 21px;
-    position: relative;
+    width: 27%;
 }
 
-.testimonials img {
+.card img {
     width: 70px;
     height: 70px;
+    margin: 0 0 1.5rem 0;
 }
 
-.testimonials h3 {
-    font-style: normal;
+.card h3 {
     font-weight: 700;
     font-size: 16.0714px;
     line-height: 156.6%;
-    display: flex;
-    align-items: center;
     letter-spacing: -0.01em;
     color: #3F4868;
+    margin: 0 0 1.5rem 0;
 }
 
-.testimonials p {
+.card p {
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 156.6%;
+    color: #B9B9C1;
+}
+
+.more {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    margin-top: 3rem;
+}
+
+
+/* ESTO ES EL DISEÑO DE LLAMADO A ACCION */
+.call {
+    position: relative;
+    width: 100%;
+    height: 224px;
+    left: 0px;
+    top: 0px;
+    background: #8B48BF;
+    align-items: center;
+    justify-content: center;
+    gap: 30rem;
+    margin-top: 10rem;
+}
+
+.call h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
     display: flex;
     align-items: center;
-    text-align: center;
-    color: #B9B9C1;
+    letter-spacing: -0.005em;
+    color: #FFFFFF;
+    width: 30%;
+}
+
+.call button {
+    padding: 10px;
+    gap: 10px;
+    width: 134px;
+    height: 44px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    color: #8B48BF;
+}
+
+/* ESTO ES EL DISEÑO DEL FOOTER */
+footer {
+    background: #1E1E26;
+    position: relative;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+    gap: 9rem;
+    padding-top: 3rem;
+}
+
+.rds {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 4rem;
+    gap: 13px;
+}
+
+.links {
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+    padding: 0px;
+    gap: 12px;
+    list-style: none;
+}
+
+.links2 {
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+    padding: 0px;
+    gap: 12px;
+    list-style: none;
+}
+
+.links a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.links2 a {
+    align-items: flex-start;
+    align-content: flex-start;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.subs {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+form button {
+    padding: 10px;
+    height: 44px;
+    background: #8B48BF;
+    border-radius: 50px;
+    width: 30%
+}
+
+input {
+    border: none;
+    padding: 10px;
+    width: 220px;
+    height: 44px;
+    background: #FFFFFF;
+    border-radius: 50px;
+}
+
+.copyright {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12.5px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    color: #8C8C94;
+    background: #1E1E26;
+    justify-content: flex-end;
+    padding: 1rem 13rem 1rem 0;
 }
