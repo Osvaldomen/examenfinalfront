@@ -1,7 +1,3 @@
-.flex {
-    display: flex;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +5,13 @@
 }
 
 /* FONTS */
-h1, h2, h3, p, button, li, a {
+h1,
+h2,
+h3,
+p,
+button,
+li,
+a {
     font-family: 'Be Vietnam Pro', sans-serif;
 }
 
@@ -25,183 +27,212 @@ p {
     font-size: 16px;
 }
 
-/* ESTO ES EL DISEÑO DEL EL HEADER DE ESCRITORIO*/
-
-header {
-    position: sticky;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 65px 0px;
-    gap: 224px;
-    margin-bottom: 6rem;
-}
-
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 12rem;
-}
-
-.logo {
-    height: 100%;
-}
-
-.lista {
-    justify-content: center;
-    list-style-type: none;  
-}
-
-.lista li {
-    margin: 5px 1rem;
-}
-
-.lista a {
-    font-style: normal;
+a { font-style: normal;
     font-weight: 500;
     font-size: 13px;
     line-height: 19px;
-    display: flex;
     align-items: center;
-    color: #242E52;
-    text-decoration: none;
-}
-
-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    gap: 10px;
-    width: 134px;
-    height: 44px;
-    background: #8B48BF;
-    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
-    border-radius: 50px;
-    color: #FFFFFF;
-    border: 0;
 }
 
 
+.flex {
+    display: flex;
+}
 
-/* ESTO ES EL DISEÑO DEL SLIDE*/
 
-.slide {
-    flex-direction: row;
-    align-items: center;
-    gap: 100px;
+/* HEADER DE ESCRITORIO */
+
+header {
     position: relative;
     justify-content: center;
 }
 
+nav {
+    align-items: center;
+    justify-content: space-between;
+    width: 77%;
+}
+
+.logo {
+    width: 107px;
+    padding: 74px 0;
+}
+
+
+.lista {
+    list-style-type: none;
+    gap: 28px;
+}
+
+.lista a {
+    color: #242E52;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgba(36, 46, 82, 0.6);
+}
+
+.botones {
+    width: 134px;
+    height: 44px;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    background-color: #8B48BF;
+    color: #FFFFFF;
+    border: 0;
+    cursor: pointer;
+}
+
+.botones:hover {
+    background: rgba(139, 72, 191, 0.7);
+}
+
+.menumobile img {
+    width: 48px;
+}
+
+@media screen and (max-width: 890px) {
+    .menuboton {
+        display: none;
+    }
+
+    .lista {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 891px) {
+    .menumobile {
+        display: none;
+    }
+}
+
+/* ESTO ES EL DISEÑO DEL SLIDE*/
+
+.slide {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 0 40px;
+    position: relative;
+}
+
 .slide img {
-    width: 540px;
-    height: 461.07px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+    width: 100%;
+    padding: 0 40px 100px 40px;
 }
 
 .text {
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-end;
     text-align: right;
     letter-spacing: -0.035em;
     color: #232C50;
-    flex-direction: column;
-    padding: 0px;
     gap: 28px;
-    width: 450px;
-    height: 399px;
+    padding: 0 40px;
 }
 
 .text p {
-    font-weight: 500;
-    font-size: 16.5584px;
     line-height: 157.1%;
     color: #000000;
+}
+
+@media screen and (min-width: 891px) {
+    .slide {
+        margin: 120px 0;
+        flex-direction: row;
+    }
+
+    .slide img {
+        width: 40%;
+        padding: 0 8% 0 0;
+    }
+
+    .text {
+        padding: 0px;
+        width: 30%;
+    }
 }
 
 
 /* ESTO ES EL DISEÑO DEL AVISO*/
 .aviso {
-    width: 100%;
-    height: 10rem;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 22px 10px;
-    gap: 130px;
-    position: relative;
-    background: #8B48BF;
-    margin-top: 100px;
-    margin-bottom: 2rem;
+    padding: 40px 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: #3CDDF3;
+    margin: 80px 0 0 0;
 }
 
 .aviso h2 {
-    width: 500px;
-    height: 88px;
+    padding: 0 0 50px;
     font-weight: 700;
     font-size: 36px;
     line-height: 114.6%;
-    align-items: center;
     color: #FFFFFF;
-
 }
 
 .aviso p {
-    width: 450px;
-    height: 88px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 151.1%;
-    display: flex;
-    align-items: center;
+    line-height: 150%;
     color: #FFFFFF;
 }
 
+@media screen and (min-width: 891px) {
+    .aviso {
+        flex-direction: row;
+        justify-content: center;
+        gap: 5%;
+        background: #8B48BF;
+        padding: 40px 0 20px 0;
+    }
 
+    .aviso h2 {
+        width: 35%;
+        align-items: center;
+    }
+
+    .aviso p {
+        width: 32%;
+        font-weight: 500;
+        font-size: 16px;
+        align-items: center;
+    }
+}
 
 /* ESTO ES EL DISEÑO DEL FEATURES */
 .features {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 4rem 0 0 0;
-    gap: 20px;
     position: relative;
-    width: 100%;
+    align-items: flex-end;
+    margin: 65px 0 58px 34px;
 }
 
-.features .fcard {
-    flex-direction: row;
-    justify-content: center;
+.cardfeature {
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
-    gap: 1.5rem;    
+}
+
+
+.featureheader {
+    flex-direction: row;
+    width: 100%;
+    background: rgba(139, 72, 191, 0.3);
+    border-radius: 50px 0px 0px 50px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 18px;
 }
 
 .features .textcard {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 18px;
-    width: 437px;
+    flex-direction: row;
 }
 
 .features button {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 25px;
-    gap: 10px;
-    width: 69px;
-    background: #8B48BF;
     border-radius: 30px;
+    width: 20%;
 }
 
 .features h3 {
@@ -209,44 +240,65 @@ button {
     font-weight: 700;
     font-size: 16px;
     line-height: 23px;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.015em;
     color: #323851;
 }
 
 .features p {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16.2984px;
+
     line-height: 26px;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.01em;    
     color: #B3B2B7;
+    padding: 30px 0;
+}
+
+@media screen and (min-width: 891px) {
+    .features {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 0 145px 0;
+        background: #FAFAFA;
+    }
+
+    .cardfeature {
+        justify-content: center;
+        align-items: center;
+        width: 530px;
+        margin: 43px 30px;
+    }
+
+
+    .featureheader {
+        background: transparent;
+    }
+
+
+    .features button {
+        background: #8B48BF;
+        width: 12%;
+    }
+
+    .features p {
+        padding: 18px 0 0 15%;
+    }
 }
 
 /* ESTO ES EL DISEÑO DE LAS CARD TESTIMONIALS */
 
 .testimonial {
-    flex-direction: row;
-    position: relative;
-    width: 100%;
-    gap: 2rem;
     justify-content: center;
-    align-items: center;
-
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin: 72px 18px;
+    background-color: #FAFAFA;
 }
 
 .cards {
     text-align: center;
-    align-items: center;
-    justify-content: center;
 }
 
 .cards h2 {
-    margin: 8rem 0 4rem 0;
-    font-style: normal;
+    margin: 4rem 0 4rem 0;
     font-weight: 700;
     font-size: 39.2143px;
     line-height: 156.6%;
@@ -256,14 +308,17 @@ button {
 .card {
     flex-direction: column;
     align-items: center;
-    padding: 0px;
-    width: 27%;
+    padding: 0;
+    width: 474px;
+    position: relative;
 }
 
 .card img {
-    width: 70px;
-    height: 70px;
+    width: 4.3rem;
+    height: 4.3rem;
     margin: 0 0 1.5rem 0;
+    position: absolute;
+    top: -42px;
 }
 
 .card h3 {
@@ -272,113 +327,151 @@ button {
     line-height: 156.6%;
     letter-spacing: -0.01em;
     color: #3F4868;
-    margin: 0 0 1.5rem 0;
+    margin: 50px 0 5px 0;
 }
 
 .card p {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
     line-height: 156.6%;
     color: #B9B9C1;
+    margin: 16px;
 }
 
 .more {
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    padding: 10px;
-    gap: 10px;
-    margin-top: 3rem;
+    margin: 84px 0 58px;
 }
 
+.cards {
+    z-index: 1;
+
+}
+
+.cards1 {
+    display: none;
+    z-index: 2;
+}
+
+.cards3 {
+    display: none;
+    z-index: 3;
+}
+
+
+@media screen and (min-width: 891px) {
+    .testimonial {
+        margin: 72px 71px;
+    }
+
+    .cards {
+        text-align: center;
+    }
+
+    .cards1 {
+        display: flex;
+        z-index: 2;
+    }
+
+    .cards3 {
+        display: flex;
+        z-index: 3;
+    }
+}
 
 /* ESTO ES EL DISEÑO DE LLAMADO A ACCION */
 .call {
-    position: relative;
-    width: 100%;
-    height: 224px;
-    left: 0px;
-    top: 0px;
-    background: #8B48BF;
+    flex-direction: column;
+    background: #3CDDF3;
     align-items: center;
     justify-content: center;
-    gap: 30rem;
-    margin-top: 10rem;
 }
 
 .call h2 {
+    margin: 10%;
     font-weight: 700;
     font-size: 40px;
     line-height: 48px;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.005em;
     color: #FFFFFF;
-    width: 30%;
+    text-align: center;
 }
 
 .call button {
-    padding: 10px;
-    gap: 10px;
-    width: 134px;
-    height: 44px;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
-    border-radius: 50px;
-    color: #8B48BF;
+    margin: 0 0 40px;
+    background-color: #232C50;
 }
+
+.callbuttom:hover {
+    background: white;
+    color: rgba(139, 72, 191, 0.7);
+}
+
+@media screen and (min-width: 891px) {
+    .call {
+        flex-direction: row;
+        background: #8B48BF;
+        align-items: center;
+        justify-content: center;
+        gap: 30%;
+    }
+
+    .call h2 {
+        margin: 64px 0;
+        text-align: left;
+        width: 35%;
+    }
+
+    .call button {
+        color: #8B48BF;
+        margin: 0;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+        border-radius: 50px;
+    }
+}
+
 
 /* ESTO ES EL DISEÑO DEL FOOTER */
 footer {
+    flex-direction: column;
     background: #1E1E26;
-    position: relative;
+    padding: 52px 0 0;
+}
+
+.footernav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerlinks {
+    margin: 20px 0 50px;
     justify-content: center;
     align-items: flex-start;
-    align-content: center;
-    gap: 9rem;
-    padding-top: 3rem;
 }
 
 .rds {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding-top: 4rem;
-    gap: 13px;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.rdsicon {
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
 }
 
 .links {
+    position: relative;
     flex-direction: column;
-    align-items: flex-start;
-    align-content: flex-start;
-    justify-content: flex-start;
-    padding: 0px;
-    gap: 12px;
     list-style: none;
-}
-
-.links2 {
-    flex-direction: column;
-    align-items: flex-start;
-    align-content: flex-start;
-    justify-content: flex-start;
-    padding: 0px;
+    flex-wrap: wrap;
+    margin: 20px 50px;
     gap: 12px;
-    list-style: none;
 }
 
 .links a {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 23px;
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-.links2 a {
-    align-items: flex-start;
-    align-content: flex-start;
     font-weight: 400;
     font-size: 16px;
     line-height: 23px;
@@ -393,36 +486,78 @@ footer {
 }
 
 form {
+    position: relative;
     flex-direction: row;
     gap: 0.5rem;
 }
 
 form button {
     padding: 10px;
-    height: 44px;
     background: #8B48BF;
-    border-radius: 50px;
     width: 30%
-}
+}   
 
 input {
     border: none;
     padding: 10px;
-    width: 220px;
+    width: 90%;
     height: 44px;
     background: #FFFFFF;
     border-radius: 50px;
 }
 
+.logo-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px 0px;
+    gap: 10px;
+}
+
 .copyright {
+    padding-bottom: 50px;
     font-style: normal;
-    font-weight: 500;
-    font-size: 12.5px;
     line-height: 18px;
-    display: flex;
     align-items: center;
     color: #8C8C94;
     background: #1E1E26;
-    justify-content: flex-end;
-    padding: 1rem 13rem 1rem 0;
+    justify-content: center;
+}
+
+@media screen and (min-width: 891px) {
+    footer {
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 5%;
+    }
+
+    .footerlinks {
+        margin: 0;
+        gap: 150px;
+    }
+
+    .rds {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .rdsicon {
+        gap: 15px;
+    }
+
+    .subs {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .logo-footer {
+        padding: 0;
+        margin-bottom: 80px;
+    }
+
+    .copyright {
+        justify-content: flex-end;
+        padding-right: 15%;
+    }
 }
